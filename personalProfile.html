@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Buhnrop</title>
+    <link rel="stylesheet" href="./personalProfile.css"type="text/css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+ 
+</head>
+<body>
+        
+<!--This is the header of the page-->
+    <div id ="header">
+        <div class="row">
+            <div class="col">
+                <a href="#" role="button">
+                    <img src="./image/logo cyka bear.png" alt="">
+                    <img src="./image/buhnrop.png" alt="">
+                </a>
+            </div>
+        
+            <div class="col">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search...">
+                    <div class="input-group-append">
+                        <button id="search_btn" class="btn btn-secondary" type="button", >
+                            <img class="search_logo" src="./image//search_icon.png" alt="search_icon">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div id="header_col3" class="col">
+              <a id="shopping_cart" href="https://www.google.com" role="button">
+                <button type="button" class="btn btn-outline-warning"><b>Aunction Cart</b></button>
+              </a>
+                <div class="dropdown"style="float:right;">
+                    <div class="chip">
+                        <img src="./image/guest.png" alt="guest icon">
+                        <b>Cyka Seller</b>  
+                    </div>
+                    <div class="dropdown-content">
+                    <a href="personalArea.html">
+                    <button type="button" class="btn btn-primary">Profile</button></a>
+                    <a href="favourite.html">
+                    <button type="button" class="btn btn-primary">Favourite</button></a>
+                    <a href="wonProducts.html">
+                    <button type="button" class="btn btn-primary">History</button></a>
+                    <a href="template.html">
+                    <button type="button" class="btn btn-primary">Logout</button></a> 
+                  </div>
+            </div>                
+            </div>
+          </div>
+
+        <div id="navigate_bar">
+            <div class="btn-group btn-group-small">
+                <button type="button" class="btn btn-primary">Categories</button>
+                <button type="button" class="btn btn-primary">News</button>
+                <button type="button" class="btn btn-primary">FAQs</button>
+                <button type="button" class="btn btn-primary">Help</button>
+            
+            </div>
+        </div>
+    </div>
+<!-- content -->
+
+<div class="container" >
+    <h2>Product List</h2>
+    <ul class="responsive-table">
+      <li class="table-header">
+        <div class="col col-1">Id</div>
+        <div class="col col-2">Product Name</div>
+        <div class="col col-3">Guarantee Bid</div>
+        <div class="col col-4">Product Status</div>
+        <div class="col col-5">Cancle</div>
+
+      </li>
+      <li class="table-row">
+        <div class="col col-1" data-label="Job Id">42235</div>
+        <div class="col col-2" data-label="Customer Name">Iphone xXx</div>
+        <div class="col col-3" data-label="Amount">$350</div>
+        <div class="col col-4" data-label="Payment Status">Valid</div>
+        <button><div class="col col-5" style="color: red;">X</div></button>
+
+      </li>
+      <li class="table-row">
+        <div class="col col-1" data-label="Job Id">42442</div>
+        <div class="col col-2" data-label="Customer Name">CatSlave 1</div>
+        <div class="col col-3" data-label="Amount">$220</div>
+        <div class="col col-4" data-label="Payment Status">Valid</div>
+        <button><div class="col col-5" style="color: red;">X</div></button>
+
+      </li>
+      <li class="table-row">
+        <div class="col col-1" data-label="Job Id">42257</div>
+        <div class="col col-2" data-label="Customer Name">CatSlave 2</div>
+        <div class="col col-3" data-label="Amount">$341</div>
+        <div class="col col-4" data-label="Payment Status">Valid</div>
+        <button><div class="col col-5" style="color: red;">X</div></button>
+
+      </li>
+      <li class="table-row">
+        <div class="col col-1" data-label="Job Id">42311</div>
+        <div class="col col-2" data-label="Customer Name">CatSlave 3</div>
+        <div class="col col-3" data-label="Amount">$115</div>
+        <div class="col col-4" data-label="Payment Status">Out of Date</div>
+        <button><div class="col col-5" style="color: red;">X</div></button>
+
+      </li>
+    </ul>
+  <br>
+  <br>
+  <hr>
+    <h2>Owned List</h2>
+    <ul class="responsive-table">
+      <li class="table-header">
+        <div class="col col-1">Id</div>
+        <div class="col col-2">Product Name</div>
+        <div class="col col-3">Owner Name</div>
+        <div class="col col-4">Product Status</div>
+      </li>
+      <li class="table-row">
+        <div class="col col-1" data-label="Job Id">42535</div>
+        <div class="col col-2" data-label="Customer Name">Iphone xXx</div>
+        <div class="col col-3" data-label="Amount">Johnny Sins</div>
+        <div class="col col-4" data-label="Payment Status">Paid</div>
+
+      </li>
+      <li class="table-row">
+        <div class="col col-1" data-label="Job Id">42462</div>
+        <div class="col col-2" data-label="Customer Name">CatSlave x</div>
+        <div class="col col-3" data-label="Amount">Ricardo</div>
+        <div class="col col-4" data-label="Payment Status">unPaid</div>
+
+      </li>
+
+    </ul>
+  </div> 
+  
+<!-- ------ -->
+    <div id="footer" class="Footer">
+        <a href="#">
+            <img src="./image/buhnrop.png", alt=""></a>
+          <p id="credit">Developed by Buhnrop Team</p>
+      </div>
+      
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+  </body>
+  </html>

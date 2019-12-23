@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Buhnrop</title>
+    <link rel="stylesheet" href="resources/css/listcategoryadmin.css">
+    <link rel="stylesheet" href="resources/css/header.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<div id ="header">
+        <div class="row">
+                <div class="col">
+                    <a href="./index.html" role="button">
+                        <img src="resources/css/images/logo cyka bear.png" alt="">
+                        <img src="resources/css/images/buhnrop.png" alt="">
+                    </a>
+                </div>
+            
+                <div class="col">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search...">
+                        <div class="input-group-append">
+                            <button id="search_btn" class="btn btn-secondary" type="button", >
+                                <img class="search_logo" src="resources/css/images/search_icon.png" alt="search_icon">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div id="header_col3" class="col">
+                    <a id="user_button" href="./sign_in.html" role="button">
+                    <div class="chip">
+                        <div class="dropdown"style="float:right;">
+                                <img class="user_logo" src="resources/css/images/guest_logo.png" alt="avatar" class="avatar">
+                                <span><b>Trần Vinh Hiển</b></span>
+                                <div class="dropdown-content">
+                                <a href="./personalArea.html">
+                                <button type="button" class="btn btn-primary">Infomation</button></a>
+                                <a href="./favourite.html">
+                                <button type="button" class="btn btn-primary">Favourite</button></a>
+                                <a href="./biddingProducts.html">
+                                <button type="button" class="btn btn-primary">Bidding Products</button></a>
+                                <a href="./wonProducts.html">
+                                <button type="button" class="btn btn-primary">Won Products</button></a>
+                                <a href="./index.html">
+                                <button type="button" class="btn btn-primary">Logout</button></a>
+                            </div>
+                        </div>                        
+                    </div>
+                    </a>
+                </div>                
+            </div>
+
+    <nav class="navbar-toggleable-md navbar-light bg-faded" style="background-color : pink">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav mr-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="listcategory.html">Categories Management</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products Management
+        </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="listproduct.html">Laptop</a>
+                        </li>
+                        <li><a class="dropdown-item" href="cellphone.html">Cellphone</a>
+                        </li>
+                        <li><a class="dropdown-item" href="ipad.html">Ipad</a>
+                        </li>
+                        <li><a class="dropdown-item" href="headphone.html">Headphone</a>
+                        </li>
+                        <li><a class="dropdown-item" href="shoes.html">Shoes</a>
+                        </li>
+                </li>
+                </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="listuseradmin.html">User Management</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="approveduser.html">Approval</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<div class="content">
+    <div class="content mt-3">
+        <div class="animated">
+            <div class="card">
+                <div class="card-header">
+                    <div class="d-inline-block w-50">
+
+                        <div class="d-inline w-50">
+                            <button class="btn btn-light"><b>Update Product</b>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="d-inline w-50">
+
+                        <button class="btn btn-light"><b>Insert Product</b>
+
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <strong class="card-title">&ensp;&nbsp;&nbsp;List Products</strong>
+                    </div>
+                    <div class="ahihi">
+                        <form>
+                            <input type="search" placeholder="Search">
+                        </form>
+                    </div>
+
+
+
+                    <div class="card-body">
+                        <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
+
+                            <thead>
+                                <th>STT</th>
+                                <th>Name</th>
+                                <th>Description</th>
+                                <th>Picture</th>
+                                <th>Price</th>
+                                <th>Seller</th>
+                                <th>Delete</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Iphone 11 Pro</td>
+                                    <td>64GB - Original</td>
+                                    <td>
+                                        <img src="resources/css/images/cellphone/1.jpg" alt="" width="150px" height="150px" />
+                                    </td>
+                                    <td>30.890.000đ</td>
+                                    <td>Apple1</td>
+                                    <td>
+                                        <button class="btn-del btn btn-danger">Del</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Iphone 7 plus</td>
+                                    <td>128GB - Original</td>
+                                    <td>
+                                        <img src="resources/css/images/cellphone/2.jpg" alt="" width="150px" height="150px" />
+                                    </td>
+                                    <td>10.780.000đ</td>
+                                    <td>Apple2</td>
+                                    <td>
+                                        <button class="btn-del btn btn-danger">Del
+
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Samsung Galaxu M10</td>
+                                    <td>64GB - SecondHand</td>
+                                    <td>
+                                        <img src="resources/css/images/cellphone/3.jpg" alt="" width="150px" height="150px" />
+                                    </td>
+                                    <td>4.500.000đ</td>
+                                    <td>Samsung1</td>
+                                    <td>
+                                        <button class="btn-del btn btn-danger">Del
+
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Samsung Galaxy Note 10</td>
+                                    <td>128GB - Original </td>
+                                    <td>
+                                        <img src="resources/css/images/cellphone/4.jpg" alt="" width="150px" height="150px" />
+                                    </td>
+                                    <td>17.200.000đ</td>
+                                    <td>Samsung2</td>
+                                    <td>
+                                        <button class="btn-del btn btn-danger">Del
+
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Redmi Xiaomi Note 4</td>
+                                    <td>64GB - SecondHand </td>
+                                    <td>
+                                        <img src="resources/css/images/cellphone/5.jpg" alt="" width="150px" height="150px" />
+                                    </td>
+                                    <td>2.800.000đ</td>
+                                    <td>Trung Hieu</td>
+                                    <td>
+                                        <button class="btn-del btn btn-danger">Del
+
+                                        </button>
+                                    </td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+    <div id="footer" class="Footer">
+        <img src="resources/css/images/buhnrop.png" alt="">
+        <p id="credit">Developed by Buhnrop Team</p>
+    </div>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,160 @@
+#footer
+{
+background-color: black;
+height: 80px;
+display: flex;
+justify-content: space-around;
+align-items: center;
+box-shadow: 20px 20px grey;
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+}
+
+#credit
+{
+color: #F49DBA;
+font-size: large;
+}
+.row
+{
+background-color: black;
+height: 80px;
+align-items: center;
+}
+
+.col
+{    
+color: white;
+display: flex;
+flex-direction: row;
+justify-content:space-between;
+justify-items: center;
+align-items: center;
+}
+
+#header_col3
+{
+justify-content: flex-end;
+transform: translate(-20px, 0px);
+}
+
+#username_string
+{
+justify-content: center;
+}
+
+#navigate_bar
+{
+background-color: #F49DBA;
+}
+
+#search_btn {
+background-color: #F49DBA;
+color: #F49DBA;
+}
+
+.btn-group button
+{
+background-color: #F49DBA;
+border-color: #F49DBA;
+color: black;
+}
+
+.btn-group button:hover
+{
+color: #F49DBA;
+background-color: black;
+border-color: black;
+text-shadow: 1px 1px 2px #F49DBA, 0 0 50px #F49DBA, 0 0 10px #F49DBA;
+box-shadow: 0 10px 10px 0 rgba(241, 235, 240, 0.2), 0 10px 10px 0 rgba(231, 216, 231, 0.19);
+}
+
+.sticky {
+position: fixed;
+top: 0;
+width: 100%;
+}
+
+.dropdown {
+position: relative;
+display: inline-block;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+right: 0;
+background-color: black;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+display: block;
+}
+
+.dropdown-content button {
+color: #F49DBA;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+border-color: black;
+background-color: black;
+text-align: left;
+}
+
+.dropdown-content button:hover {
+background-color: #F49DBA;
+color: black;
+border-color: #F49DBA;
+width: 100%;
+}
+
+#table {
+border-collapse: collapse;
+table-layout: auto;
+}
+
+#table td {
+border-bottom: 2px solid black;
+padding: 10px;
+text-align: center;
+}
+
+#table th {
+border-bottom: 2px solid black;
+padding: 10px;
+text-align: center;
+}
+
+#table button{
+  color: black;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+  border-color: white;
+  background-color: #F49DBA;
+  text-align: center;
+  width: 100%;
+}
+
+#table button:hover{
+  color: #F49DBA;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+  border-color: white;
+  background-color: black;
+  text-align: center;
+  width: 100%;
+}
+
+h1{
+color:black;
+background-color:#F49DBA;
+text-align: center;
+}
+
