@@ -1,0 +1,45 @@
+
+#table {
+border-collapse: collapse;
+table-layout:auto;
+}
+
+#table td {
+border-bottom: 2px solid black;
+padding: 10px;
+text-align: center;
+}
+
+#table th {
+border-bottom: 2px solid black;
+padding: 10px;
+text-align: center;
+}
+
+#table button{
+  color: black;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+  border-color: white;
+  background-color: #F49DBA;
+  text-align: center;
+  width: 100%;
+}
+
+#table button:hover{
+  color: #F49DBA;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+  border-color: white;
+  background-color: black;
+  text-align: center;
+  width: 100%;
+}
+
+h1{
+color:black;
+background-color:#F49DBA;
+text-align: center;
+}

@@ -1,0 +1,140 @@
+<link rel="stylesheet" href="resources/css/product_detail.css" type="text/css">
+{{>header}}
+<div class="container">
+<div class="card">
+        <div class="container-fliud">
+            <div class="wrapper row">
+                <div class="preview col-md-6">
+                    
+                    <div class="preview-pic tab-content">
+                        <div class="tab-pane active" id="pic-1"><img src="resources/images/cat/meomeo1.jpg" /></div>
+                        <div class="tab-pane" id="pic-2"><img src="resources/images/cat/meomeo2.jpg" /></div>
+                        <div class="tab-pane" id="pic-3"><img src="resources/images/cat/meomeo3.jpg" /></div>
+                        <div class="tab-pane" id="pic-4"><img src="resources/images/cat/meomeo4.jpg" /></div>
+                    </div>
+                    <ul class="preview-thumbnail nav nav-tabs">
+                        <li class="active"><a data-target="#pic-1" data-toggle="tab"><img src="resources/images/cat/meomeo1.jpg" /></a></li>
+                        <li><a data-target="#pic-2" data-toggle="tab"><img src="resources/images/cat/meomeo2.jpg" /></a></li>
+                        <li><a data-target="#pic-3" data-toggle="tab"><img src="resources/images/cat/meomeo3.jpg" /></a></li>
+                        <li><a data-target="#pic-4" data-toggle="tab"><img src="resources/images/cat/meomeo4.jpg" /></a></li>
+                    </ul>
+                    
+                </div>
+                <div class="details col-md-6">
+                    <h3 class="product-title">Stupid Useless Meow Meow Cat</h3>
+                    <div class="rating">
+                        <div class="stars">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                        <span class="review-no">1,025,289 bids</span>
+                    </div>
+                    <p class="product-description">
+                        Have you ever get tired because of a smart, lovely and useful cat? 
+                        Do you want to cuddle a stupid, useless, disgusting creature that was born to do a single job - sleeping?
+                        We have a good new for you! <br>
+                        We introduce the one that can assamble all that, the most stupid, useless, disgusting cat just for you.
+                    </p>
+                    <h4 class="price">guarantee Bid: <span>1,000,000$</span></h4>
+
+                    <p class="vote"><strong>Time remained: </strong></p>
+                    
+                    <div class="bidding">
+                        <form>
+                        <div class="form-row">
+                            <div class="col-auto my-1">
+                                <label class="my-1" for="txtboxcurrentbid"><strong>Current Bid</strong></label>
+                                <input type="text" class="form-control" placeholder="12,000$" readonly>
+                                <label for="exampleInputPassword1"><strong>Next Bid</strong> </label>
+                                <input type="text" class="form-control" placeholder="Place your bid">
+                            </div>
+                        </div>
+                        </form>
+                        <button class="btn btn-success">Auto Bid</button>
+                        <button class="btn btn-success">Bid</button>
+                        <button class="btn btn-outline-danger" type="button"><span class="fa fa-heart"></span></button>
+                    </div>
+                </div>
+            </div>
+            
+            <hr>
+            <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <a class="nav-item nav-link active" id="nav-description-tab" data-toggle="tab" href="#nav-description" aria-controls="nav-description" aria-selected="true">Description</a>
+                    <a class="nav-item nav-link" id="nav-detail-tab" data-toggle="tab" href="#nav-biddetail" aria-controls="nav-biddetail" aria-selected="false">Detail</a>
+                    <a class="nav-item nav-link" id="nav-history-tab" data-toggle="tab" href="#nav-bidhistory" aria-controls="nav-bidhistory" aria-selected="false">History</a>
+            </div>
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-description" role="tabpanel" aria-labelledby="nav-description-tab">
+                    <h2>Description</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                    </p>
+                    <table>
+                        <tr>
+                        <th>Feature 1</th>
+                        <th>Feature 2</th> 
+                        </tr>
+                        <tr>
+                        <td>Lorem ipsum dolor sit amet</td>
+                        <td>Lorem ipsum dolor sit amet</td>
+                        </tr>
+                        <tr>
+                        <td>Lorem ipsum dolor sit amet</td>
+                        <td>Lorem ipsum dolor sit amet</td>
+                        </tr>
+                        <tr>
+                        <td>Lorem ipsum dolor sit amet</td>
+                        <td>Lorem ipsum dolor sit amet</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="tab-pane fade" id="nav-biddetail" role="tabpanel" aria-labelledby="nav-detail-tab">
+                    <h5>Bidder: 
+                        <span class="size" data-toggle="tooltip" title="small">Alahu Akbar </h5></span>
+                    <h5>Highest Bid:
+                        <span class="size" data-toggle="tooltip" title="small">Booyeah911</h5></span>
+                </div>
+                <div class="tab-pane fade" id="nav-bidhistory" role="tabpanel" aria-labelledby="nav-history-tab">
+                    <table id="table" align="center">
+                            <tr>
+                                <th>Time</th>
+                                <th>Bidder</th>
+                                <th>Price</th>
+                            </tr>
+                            <tr>
+                                <td>1/11/2019 10:43	</td>
+                                <td>****Khoa</td>
+                                <td>6,000,000</td>
+                            </tr>
+                            <tr>
+                                <td>1/11/2019 10:43	</td>
+                                <td>****Khoa</td>
+                                <td>6,000,000</td>
+                            </tr>
+                            <tr>
+                                <td>1/11/2019 10:43	</td>
+                                <td>****Khoa</td>
+                                <td>6,000,000</td>
+                            </tr>
+                            <tr>
+                                <td>1/11/2019 10:43	</td>
+                                <td>****Khoa</td>
+                                <td>6,000,000</td>
+                            </tr>
+                            <tr>
+                                <td>1/11/2019 10:43	</td>
+                                <td>****Khoa</td>
+                                <td>6,000,000</td>
+                            </tr>
+                            </table>                        
+                </div>
+            </div>
+            </div>
+        </div>
+</div>
+{{>footer}}

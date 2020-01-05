@@ -1,0 +1,241 @@
+<link rel="stylesheet" href="resources/css/listcategoryadmin.css">
+<div id ="header">
+        <div class="row">
+                <div class="col">
+                    <a href="./index.html" role="button">
+                        <img src="resources/css/images/logo cyka bear.png" alt="">
+                        <img src="resources/css/images/buhnrop.png" alt="">
+                    </a>
+                </div>
+            
+                <div class="col">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search...">
+                        <div class="input-group-append">
+                            <button id="search_btn" class="btn btn-secondary" type="button", >
+                                <img class="search_logo" src="resources/css/images/search_icon.png" alt="search_icon">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div id="header_col3" class="col">
+                    <a id="user_button" href="./sign_in.html" role="button">
+                    <div class="chip">
+                        <div class="dropdown"style="float:right;">
+                                <img class="user_logo" src="resources/css/images/guest_logo.png" alt="avatar" class="avatar">
+                                <span><b>Trần Vinh Hiển</b></span>
+                                <div class="dropdown-content">
+                                <a href="./personalAreaAdmin.html">
+                                <button type="button" class="btn btn-primary">Infomation</button></a>
+                                
+                                <a href="./index.html">
+                                <button type="button" class="btn btn-primary">Logout</button></a>
+                            </div>
+                        </div>                        
+                    </div>
+                    </a>
+                </div>                
+            </div>
+        
+    <nav class="navbar-toggleable-md navbar-light bg-faded" style="background-color : pink">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav mr-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="./listcategory.html">Categories Management</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products Management
+        </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="./listproduct.html">Laptop</a>
+                        </li>
+                        <li><a class="dropdown-item" href="./cellphone.html">Cellphone</a>
+                        </li>
+                        <li><a class="dropdown-item" href="./ipad.html">Ipad</a>
+                        </li>
+                        <li><a class="dropdown-item" href="./headphone.html">Headphone</a>
+                        </li>
+                        <li><a class="dropdown-item" href="./shoes.html">Shoes</a>
+                        </li>
+                </li>
+                </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./listuseradmin.html">User Management</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./approveduser.html">Approval</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<div class="content">
+    <div class="content mt-3">
+        <div class="animated">
+            <div class="card">
+                <div class="card-header">
+                    <div class="d-inline-block w-50">
+
+                        <div class="d-inline w-50">
+                            <button class="btn btn-light"><b>Update Product</b>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="d-inline w-50">
+
+                        <button class="btn btn-light"><b>Insert Product</b>
+
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <strong class="card-title">&ensp;&nbsp;&nbsp;List Products</strong>
+                    </div>
+                    <div class="ahihi">
+                        <form>
+                            <input type="search" placeholder="Search">
+                        </form>
+                    </div>
+
+
+
+                    <div class="card-body">
+                        <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
+
+                            <thead>
+                                <th>STT</th>
+                                <th>Name</th>
+                                <th>Description</th>
+                                <th>Picture</th>
+                                <th>Price</th>
+                                <th>Seller</th>
+                                <th>Delete</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>MacBook Air 2017</td>
+                                    <td>macOS Sierra - 1600Mhz</td>
+                                    <td>
+                                        <img src="resources/images/laptop/mac.jpg" alt="" width="150px" height="150px" />
+                                    </td>
+                                    <td>20.499.200đ</td>
+                                    <td>Apple1</td>
+                                    <td>
+                                        <button class="btn-del btn btn-danger">Del</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>HP Envy</td>
+                                    <td>Windows 10 - 1.6Ghz</td>
+                                    <td>
+                                        <img src="resources/images/laptop/hp.jpg" alt="" width="150px" height="150px" />
+                                    </td>
+                                    <td>20.419.000đ</td>
+                                    <td>Hp1</td>
+                                    <td>
+                                        <button class="btn-del btn btn-danger">Del
+
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Gaming MSI</td>
+                                    <td>Windows 10 - 2.2Ghz</td>
+                                    <td>
+                                        <img src="resources/images/laptop/msi.jpg" alt="" width="150px" height="150px" />
+                                    </td>
+                                    <td>23.850.000đ</td>
+                                    <td>MSI1</td>
+                                    <td>
+                                        <button class="btn-del btn btn-danger">Del
+
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Asus Vivobook</td>
+                                    <td>Core i5-8256U </td>
+                                    <td>
+                                        <img src="resources/images/laptop/asus.jpg" alt="" width="150px" height="150px" />
+                                    </td>
+                                    <td>15.399.000đ</td>
+                                    <td>Asus1</td>
+                                    <td>
+                                        <button class="btn-del btn btn-danger">Del
+
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Acer Aspire</td>
+                                    <td>Core i5-10210U </td>
+                                    <td>
+                                        <img src="resources/images/laptop/acer.jpg" alt="" width="150px" height="150px" />
+                                    </td>
+                                    <td>14.590.000đ</td>
+                                    <td>Acer1</td>
+                                    <td>
+                                        <button class="btn-del btn btn-danger">Del
+
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>Lenovo Legion</td>
+                                    <td>Core i5 - 8300U </td>
+                                    <td>
+                                        <img src="resources/images/laptop/lenovo.jpg" alt="" width="150px" height="150px" />
+                                    </td>
+                                    <td>19.859.000đ</td>
+                                    <td>lenovo1</td>
+                                    <td>
+                                        <button class="btn-del btn btn-danger">Del
+
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>Dell inspiron</td>
+                                    <td>Core i5 - 8265U </td>
+                                    <td>
+                                        <img src="resources/images/laptop/dell.png" alt="" width="150px" height="150px" />
+                                    </td>
+                                    <td>12.890.000đ</td>
+                                    <td>Dell1</td>
+                                    <td>
+                                        <button class="btn-del btn btn-danger">Del
+
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{>footer}}

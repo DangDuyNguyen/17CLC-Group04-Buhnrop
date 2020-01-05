@@ -1,0 +1,149 @@
+<link rel="stylesheet" href="resources/css/seller.css"type="text/css">
+{{>header}}
+<div class="content">
+
+<div class="container">
+<nav>
+<ul>
+<li type="button" data-toggle="modal" data-target="#dangsp" style="background-color: white;">             
+Đăng sản phẩm
+<span></span><span></span><span></span><span></span>
+</li>
+<li type="button" data-toggle="modal" data-target="#updateinfo" style="background-color: white;">
+Bổ sung info
+<span></span><span></span><span></span><span></span>
+</li>
+<a href="./refuse.html" style="text-decoration: none;">
+<li type="button" style="background-color: white;">
+Từ chối đánh giá
+<span></span><span></span><span></span><span></span>
+</li>
+</a>
+<a href="./personalProfile.html" style="text-decoration: none;">
+<li type="button" data-toggle="modal" data-target="#personinfo" style="background-color: white;">
+Hồ sơ cá nhân
+<span></span><span></span><span></span><span></span>
+</li>
+</a>
+</ul>
+</nav>
+</div>
+</div>
+<!-- Modal of each button -->
+<div class="modal fade" id="dangsp" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true"style="z-index: 1100;">
+<div class="modal-dialog" role="document" >
+<div class="modal-content">
+<div class="modal-header">
+  <h5 class="modal-title" id="staticBackdropLabel">Đăng sản phẩm đấu giá </h5>
+  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <div class="row">          
+    <div class="col-md-7 mb-3">
+      <label for="validationDefault01">Tên sản phẩm: </label>
+      <input type="text" class="form-control" id="validationDefault01" required>
+    </div>
+    <div class="col-1" style="border-radius: 100%;margin:20px 5px  0; height: 45px; background-color: gray;"></div>
+    <div class="col-1" style="border-radius: 100%;margin:20px 5px 0; height: 45px; background-color: gray;"></div>
+    <div class="col-1" style="border-radius: 100%;margin:20px 5px 0; height: 45px; background-color: gray;"></div>
+  </div>
+
+  <div class="input-group">
+      <input type="text" class="form-control" placeholder="Giá khởi điểm" aria-describedby="button-add">
+      <div class="input-group-append" id="button-addon4">
+        <button class="btn btn-outline-secondary" type="button">+</button>
+        <button class="btn btn-outline-secondary" type="button">-</button>
+      </div>
+    </div>
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="Bước giá" aria-describedby="button-add">
+        <div class="input-group-append" id="button-addon4">
+          <button class="btn btn-outline-secondary" type="button">+</button>
+          <button class="btn btn-outline-secondary" type="button">-</button>
+        </div>
+      </div>
+      <div class="input-group">
+          <input type="text" class="form-control" placeholder="Giá mua ngay" aria-describedby="button-add">
+          <div class="input-group-append" id="button-addon4">
+            <button class="btn btn-outline-secondary" type="button">+</button>
+            <button class="btn btn-outline-secondary" type="button">-</button>
+          </div>
+        </div>
+        <br>
+        <input type="text" class="form-control" placeholder="Mô tả" style="padding:10px 5px 50px;">
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+  <button type="button" class="btn btn-primary">Upload</button>
+</div>
+</div>
+</div>
+</div>
+
+<div class="modal fade" id="updateinfo" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true"style="z-index: 1100;">
+<div class="modal-dialog" role="document" >
+<div class="modal-content">
+    <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Popup tạm</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="sel1">Select Product:</label>
+          <select class="form-control" id="sel1">
+            <option>Iphone xXx</option>
+            <option>CatSlave 1</option>
+            <option>CatSlave 2</option>
+            <option>CatSlave 3</option>
+          </select>  
+          <br><hr>
+          <br>
+          <div class="row">          
+            <div class="col-md-7 mb-3">
+              <label for="validationDefault01">Tên sản phẩm: </label>
+              <input type="text" class="form-control" id="validationDefault01" required>
+            </div>
+            <div class="col-1" style="border-radius: 100%;margin:20px 5px  0; height: 45px; background-color: gray;"></div>
+            <div class="col-1" style="border-radius: 100%;margin:20px 5px 0; height: 45px; background-color: gray;"></div>
+            <div class="col-1" style="border-radius: 100%;margin:20px 5px 0; height: 45px; background-color: gray;"></div>
+          </div>
+
+          <div class="input-group">
+              <input type="text" class="form-control" placeholder="Giá khởi điểm" aria-describedby="button-add">
+              <div class="input-group-append" id="button-addon4">
+                <button class="btn btn-outline-secondary" type="button">+</button>
+                <button class="btn btn-outline-secondary" type="button">-</button>
+              </div>
+            </div>
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Bước giá" aria-describedby="button-add">
+                <div class="input-group-append" id="button-addon4">
+                  <button class="btn btn-outline-secondary" type="button">+</button>
+                  <button class="btn btn-outline-secondary" type="button">-</button>
+                </div>
+              </div>
+              <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Giá mua ngay" aria-describedby="button-add">
+                  <div class="input-group-append" id="button-addon4">
+                    <button class="btn btn-outline-secondary" type="button">+</button>
+                    <button class="btn btn-outline-secondary" type="button">-</button>
+                  </div>
+                </div>
+                <br>
+                <input type="text" class="form-control" placeholder="Mô tả" style="padding:10px 5px 50px;">
+
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save</button>
+      </div>  
+</div>
+</div>
+</div>
+
+{{>footer}}

@@ -1,0 +1,59 @@
+<link rel="stylesheet" href="resources/css/personalArea.css">
+{{>header}}
+<div class="content">
+    <h1>Edit Infomation</h1>
+<div class="container">   
+    <form action="" name="formtable">
+    <table id="table" align="center">
+    <tr>
+        <th>Name</th>
+        <td>
+            <input type="text" value ="Yaosu 20GG"maxlength="30" name="username">
+        </td>
+    </tr>
+    <tr>
+        <th>Email</th>
+        <td>
+            <input type="email"value="Yaosu20GG@gmail.com"name="mail">
+        </td>
+    </tr>
+    <tr>
+        <th>Password</th>
+        <td><input type="password"value="******************"name="pass"></td>
+    </tr>
+    <tr>
+        <th>Phone Number</th>
+        <td><input type="text"value="0123456789"name="phone"></td>
+    </tr>
+    <tr>
+        <th>Social ID</th>
+        <td><input type="text" value="159875321"name="cmnd"></td>
+    </tr>`
+    <tr>
+        <th>Sex</th>
+        <td>
+            <input type="radio" name="gender" value="male" checked> Male
+            <input type="radio" name="gender" value="female"> Female
+            <input type="radio" name="gender" value="other"> Other
+        </td>
+    </tr>
+    <tr>
+        <th>Address</th>
+        <td><input type="text"value="273 Lorem ipsum"name="diachi"></td>
+    </tr>
+    <tr>
+        <th>Status</th>
+        <td><input type="text" value="Bidder" readonly name="status"></td>
+    </tr>
+    <tr>
+        <td><a href="personalArea.html"><button type="button" class="btn btn-primary">Back</button></a>
+        </td>
+        <td>
+            <button type="submit" onclick="check()">Confirm</button>
+        </td>
+    </tr>
+    </table>
+    </form>
+</div>
+</div>
+{{>footer}}
