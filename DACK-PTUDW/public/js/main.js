@@ -109,7 +109,7 @@ $(function() {
     // Display the slider value and how far the handle moved
     // from the left edge of the slider.
     nonLinearSlider.noUiSlider.on('update', function ( values, handle, unencoded, isTap, positions ) {
-        nodes[handle].innerHTML = values[handle];
+        nodes[handle].inner = values[handle];
     });
   
   }

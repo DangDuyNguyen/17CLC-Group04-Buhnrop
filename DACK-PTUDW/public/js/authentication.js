@@ -13,28 +13,28 @@ function changeUserChip (UserType)
 {
     if (UserType == 1) //admin
     {
-        document.getElementById("profile-chip").innerHTML = '<div class="chip"><div class="dropdown"style="float:right;"><img class="user_logo" src="resources/css/images/guest_logo.png" alt="avatar" class="avatar"><span><b>Trần Vinh Hiển</b></span><div class="dropdown-content"><a href="./personalAreaAdmin.html"><button type="button" class="btn btn-primary">Infomation</button></a><a href="./index.html"><button type="button" class="btn btn-primary">Logout</button></a></div></div></div>';
+        document.getElementById("profile-chip").inner = '<div class="chip"><div class="dropdown"style="float:right;"><img class="user_logo" src="/css/images/guest_logo.png" alt="avatar" class="avatar"><span><b>Trần Vinh Hiển</b></span><div class="dropdown-content"><a href="./personalAreaAdmin."><button type="button" class="btn btn-primary">Infomation</button></a><a href="./index."><button type="button" class="btn btn-primary">Logout</button></a></div></div></div>';
     }
     else if (UserType == 2) //bidder
     {
-        document.getElementById("profile-chip").innerHTML = '<div class="chip"><div class="dropdown"style="float:right;"><img class="user_logo" src="resources/css/images/guest_logo.png" alt="avatar" class="avatar"><span><b>Trần Vinh Hiển</b></span><div class="dropdown-content"><a href="./personalAreaAdmin.html"><button type="button" class="btn btn-primary">Infomation</button></a><a href="./index.html"><button type="button" class="btn btn-primary">Logout</button></a></div></div></div>';
+        document.getElementById("profile-chip").inner = '<div class="chip"><div class="dropdown"style="float:right;"><img class="user_logo" src="/css/images/guest_logo.png" alt="avatar" class="avatar"><span><b>Trần Vinh Hiển</b></span><div class="dropdown-content"><a href="./personalAreaAdmin."><button type="button" class="btn btn-primary">Infomation</button></a><a href="./index."><button type="button" class="btn btn-primary">Logout</button></a></div></div></div>';
     }
     else if (UserType == 3) //customer
     {
-        document.getElementById("profile-chip").innerHTML = '<div class="chip">' +
+        document.getElementById("profile-chip").inner = '<div class="chip">' +
         '<div class="dropdown"style="float:right;">'+
-            '<img class="user_logo" src="resources/css/images/guest_logo.png" alt="avatar" class="avatar">'+
+            '<img class="user_logo" src="/css/images/guest_logo.png" alt="avatar" class="avatar">'+
             '<span><b>Trần Vinh Hiển</b></span>'+
             '<div class="dropdown-content">'+
-                '<a href="./personalArea.html">'+
+                '<a href="./personalArea.">'+
                 '<button type="button" class="btn btn-primary">Infomation</button></a>'+
-                '<a href="./favourite.html">'+
+                '<a href="./favourite.">'+
                 '<button type="button" class="btn btn-primary">Favourite</button></a>'+
-                '<a href="./biddingProducts.html">'+
+                '<a href="./biddingProducts.">'+
                 '<button type="button" class="btn btn-primary">Bidding Products</button></a>'+
-                '<a href="./wonProducts.html">'+
+                '<a href="./wonProducts.">'+
                 '<button type="button" class="btn btn-primary">Won Products</button></a>'+
-                '<a href="./index.html">'+
+                '<a href="./index.">'+
                 '<button type="button" class="btn btn-primary">Logout</button></a>'+
             '</div></div></div>';
     }

@@ -73,7 +73,7 @@ $.fn.attr2 = function() {
 
 /**
  * ajaxSubmit() provides a mechanism for immediately submitting
- * an HTML form using AJAX.
+ * an  form using AJAX.
  */
 $.fn.ajaxSubmit = function(options) {
     /*jshint scripturl:true */
@@ -171,7 +171,7 @@ $.fn.ajaxSubmit = function(options) {
     if (!options.dataType && options.target) {
         var oldSuccess = options.success || function(){};
         callbacks.push(function(data) {
-            var fn = options.replaceTarget ? 'replaceWith' : 'html';
+            var fn = options.replaceTarget ? 'replaceWith' : '';
             $(options.target)[fn](data).each(oldSuccess, arguments);
         });
     }
@@ -590,7 +590,7 @@ $.fn.ajaxSubmit = function(options) {
 
                 var isXml = s.dataType == 'xml' || doc.XMLDocument || $.isXMLDoc(doc);
                 log('isXml='+isXml);
-                if (!isXml && window.opera && (doc.body === null || !doc.body.innerHTML)) {
+                if (!isXml && window.opera && (doc.body === null || !doc.body.inner)) {
                     if (--domCheckCount) {
                         // in some browsers (Opera) the iframe DOM is not always traversable when
                         // the onload callback fires, so we loop a bit to accommodate
@@ -605,7 +605,7 @@ $.fn.ajaxSubmit = function(options) {
 
                 //log('response detected');
                 var docRoot = doc.body ? doc.body : doc.documentElement;
-                xhr.responseText = docRoot ? docRoot.innerHTML : null;
+                xhr.responseText = docRoot ? docRoot.inner : null;
                 xhr.responseXML = doc.XMLDocument ? doc.XMLDocument : doc;
                 if (isXml)
                     s.dataType = 'xml';
@@ -993,7 +993,7 @@ $.fn.fieldSerialize = function(successful) {
  *  v == ['C1']
  *
  * The successful argument controls whether or not the field element must be 'successful'
- * (per http://www.w3.org/TR/html4/interact/forms.html#successful-controls).
+ * (per http://www.w3.org/TR/4/interact/forms.#successful-controls).
  * The default value of the successful argument is true.  If this value is false the value(s)
  * for each element is returned.
  *
