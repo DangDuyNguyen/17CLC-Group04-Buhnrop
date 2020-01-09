@@ -1,6 +1,4 @@
 <!--This is the header of the page-->
-
-
     <div id ="header">
         <div class="row">
             <div class="col">
@@ -12,7 +10,7 @@
         
             <div class="col">
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search...">
+                    <input type="text" class="form-control" placeholder="Search..." id="searchInput">
                     <div class="input-group-append">
                         <button id="search_btn" class="btn btn-secondary" type="button", >
                             <img class="search_logo" src="/css/images/search_icon.png" alt="search_icon">
@@ -24,12 +22,12 @@
             
             
             <div id="header_col3" class="col">
-              <a id="shopping_cart" href="./AuctionCart.html" role="button">
-                <button type="button" class="btn btn-outline-warning"><b>Aunction Cart</b></button>
+              <a id="shopping_cart" href="/AuctionCart" role="button">
+                <button type="button" class="btn btn-outline-warning" onclick="location.href='/AuctionCart'"><b>Shopping Cart</b></button>
               </a>
               
               <div id="profile-chip"> 
-              <a  href="./sign_in.html" role="button">
+              <a  href="/sign_in" role="button">
                 <div class="chip">
                     <img src="/css/images/guest_logo.png">
                     <b>Sign in now</b>  
@@ -49,3 +47,10 @@
             </div>
         </div>
     </div>
+
+<script>
+    $('#search_btn').click(function() {
+        let url = "/searchResult?search="+ $('#searchInput').val();
+        location.href=url;
+    });
+</script>

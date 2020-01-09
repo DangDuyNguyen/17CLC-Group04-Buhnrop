@@ -23,29 +23,21 @@
     <!--================ Hero banner start =================-->
 
     <!--================ Hero Carousel start =================-->
+    <script>
+      var data = [];
+    </script>
     <section class="section-margin mt-0">
       <div class="owl-carousel owl-theme hero-carousel">
+      
+        {{#each category}} 
+
         <div class="hero-carousel__slide">
-          <img src="img/home/hero-slide1.png" alt="" class="img-fluid">
-          <a href="/categories" class="hero-carousel__slideOverlay">
-            <h3>GAME1</h3>
-            <p>Action Game</p>
+          <img src="{{imgPath}}" alt="width="150px" height="300px"" class="img-fluid">
+          <a href="" class="hero-carousel__slideOverlay" id={{name}}>
+            <p>{{name}}</p>
           </a>
         </div>
-        <div class="hero-carousel__slide">
-          <img src="img/home/hero-slide2.png" alt="" class="img-fluid">
-          <a href="/categories" class="hero-carousel__slideOverlay">
-            <h3>GAME2</h3>
-            <p>Adventure Game</p>
-          </a>
-        </div>
-        <div class="hero-carousel__slide">
-          <img src="img/home/hero-slide3.png" alt="" class="img-fluid">
-          <a href="/categories" class="hero-carousel__slideOverlay">
-            <h3>GAME3</h3>
-            <p>Multi-Player Game</p>
-          </a>
-        </div>
+        {{/each}}
       </div>
     </section>
     <!--================ Hero Carousel end =================-->
@@ -54,31 +46,30 @@
     <section class="section-margin calc-60px">
       <div class="container">
         <div class="section-intro pb-60px">
-          <p>Popular Game in the market</p>
           <h2>Trending <span class="section-intro__style">Game</span></h2>
         </div>
         <div class="row">
           <div class="col-md-6 col-lg-4 col-xl-3">
             <div class="card text-center card-product">
               <div class="card-product__img">
-                <img class="card-img" src="img/product/product1.png" alt="">
+                <img class="card-img" src="img/game/pubg.jpg" alt="width="150px" height="300px"">
                 <ul class="card-product__imgOverlay">
                   <li><button><i class="ti-search"></i></button></li>
-                  <li><button><i class="ti-shopping-cart"></i></button></li>
+                  <li><button class="add-to-cart"data-id="{{id}}"><i class="ti-shopping-cart"></i></button></li>
                   <li><button><i class="ti-heart"></i></button></li>
                 </ul>
               </div>
               <div class="card-body">
-                <p>Accessories</p>
-                <h4 class="card-product__title"><a href="/single-product">Quartz Belt Watch</a></h4>
-                <p class="card-product__price">$150.00</p>
+                <p>Action Game</p>
+                <h4 class="card-product__title"><a href="/product?id=46">PlayerUnknown BattleGrounds</a></h4>
+                <p class="card-product__price">265.000đ</p>
               </div>
             </div>
           </div>
           <div class="col-md-6 col-lg-4 col-xl-3">
             <div class="card text-center card-product">
               <div class="card-product__img">
-                <img class="card-img" src="img/product/product2.png" alt="">
+                <img class="card-img" src="img/game/csgo.jpg" alt="width="150px" height="300px"">
                 <ul class="card-product__imgOverlay">
                   <li><button><i class="ti-search"></i></button></li>
                   <li><button><i class="ti-shopping-cart"></i></button></li>
@@ -86,16 +77,16 @@
                 </ul>
               </div>
               <div class="card-body">
-                <p>Beauty</p>
-                <h4 class="card-product__title"><a href="/single-product">Women Freshwash</a></h4>
-                <p class="card-product__price">$150.00</p>
+                <p>Action Game</p>
+                <h4 class="card-product__title"><a href="/product?id=47">Counter Strike Global Offensive</a></h4>
+                <p class="card-product__price">160.000đ</p>
               </div>
             </div>
           </div>
           <div class="col-md-6 col-lg-4 col-xl-3">
             <div class="card text-center card-product">
               <div class="card-product__img">
-                <img class="card-img" src="img/product/product3.png" alt="">
+                <img class="card-img" src="img/game/stardewvalley.jpg" alt="width="150px" height="300px"">
                 <ul class="card-product__imgOverlay">
                   <li><button><i class="ti-search"></i></button></li>
                   <li><button><i class="ti-shopping-cart"></i></button></li>
@@ -103,16 +94,16 @@
                 </ul>
               </div>
               <div class="card-body">
-                <p>Decor</p>
-                <h4 class="card-product__title"><a href="/single-product">Room Flash Light</a></h4>
-                <p class="card-product__price">$150.00</p>
+                <p>Farm Game</p>
+                <h4 class="card-product__title"><a href="/product?id=50">Stardew Valley</a></h4>
+                <p class="card-product__price">245.000đ</p>
               </div>
             </div>
           </div>
           <div class="col-md-6 col-lg-4 col-xl-3">
             <div class="card text-center card-product">
               <div class="card-product__img">
-                <img class="card-img" src="img/product/product4.png" alt="">
+                <img class="card-img" src="img/game/witcher.jpg" alt="width="150px" height="300px"">
                 <ul class="card-product__imgOverlay">
                   <li><button><i class="ti-search"></i></button></li>
                   <li><button><i class="ti-shopping-cart"></i></button></li>
@@ -120,77 +111,9 @@
                 </ul>
               </div>
               <div class="card-body">
-                <p>Decor</p>
-                <h4 class="card-product__title"><a href="/single-product">Room Flash Light</a></h4>
-                <p class="card-product__price">$150.00</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 col-xl-3">
-            <div class="card text-center card-product">
-              <div class="card-product__img">
-                <img class="card-img" src="img/product/product5.png" alt="">
-                <ul class="card-product__imgOverlay">
-                  <li><button><i class="ti-search"></i></button></li>
-                  <li><button><i class="ti-shopping-cart"></i></button></li>
-                  <li><button><i class="ti-heart"></i></button></li>
-                </ul>
-              </div>
-              <div class="card-body">
-                <p>Accessories</p>
-                <h4 class="card-product__title"><a href="/single-product">Man Office Bag</a></h4>
-                <p class="card-product__price">$150.00</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 col-xl-3">
-            <div class="card text-center card-product">
-              <div class="card-product__img">
-                <img class="card-img" src="img/product/product6.png" alt="">
-                <ul class="card-product__imgOverlay">
-                  <li><button><i class="ti-search"></i></button></li>
-                  <li><button><i class="ti-shopping-cart"></i></button></li>
-                  <li><button><i class="ti-heart"></i></button></li>
-                </ul>
-              </div>
-              <div class="card-body">
-                <p>Kids Toy</p>
-                <h4 class="card-product__title"><a href="/single-product">Charging Car</a></h4>
-                <p class="card-product__price">$150.00</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 col-xl-3">
-            <div class="card text-center card-product">
-              <div class="card-product__img">
-                <img class="card-img" src="img/product/product7.png" alt="">
-                <ul class="card-product__imgOverlay">
-                  <li><button><i class="ti-search"></i></button></li>
-                  <li><button><i class="ti-shopping-cart"></i></button></li>
-                  <li><button><i class="ti-heart"></i></button></li>
-                </ul>
-              </div>
-              <div class="card-body">
-                <p>Accessories</p>
-                <h4 class="card-product__title"><a href="/single-product">Blutooth Speaker</a></h4>
-                <p class="card-product__price">$150.00</p>
-              </div> 
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 col-xl-3">
-            <div class="card text-center card-product">
-              <div class="card-product__img">
-                <img class="card-img" src="img/product/product8.png" alt="">
-                <ul class="card-product__imgOverlay">
-                  <li><button><i class="ti-search"></i></button></li>
-                  <li><button><i class="ti-shopping-cart"></i></button></li>
-                  <li><button><i class="ti-heart"></i></button></li>
-                </ul>
-              </div>
-              <div class="card-body">
-                <p>Kids Toy</p>
-                <h4 class="card-product__title"><a href="#">Charging Car</a></h4>
-                <p class="card-product__price">$150.00</p>
+                <p>Adventure</p>
+                <h4 class="card-product__title"><a href="/product?id=49">The Witcher Wild Hunt 3</a></h4>
+                <p class="card-product__price">720.000đ</p>
               </div>
             </div>
           </div>
@@ -221,13 +144,12 @@
     <section class="section-margin calc-60px">
       <div class="container">
         <div class="section-intro pb-60px">
-          <p>Popular Item in the market</p>
           <h2>Best <span class="section-intro__style">Sellers</span></h2>
         </div>
         <div class="owl-carousel owl-theme" id="bestSellerCarousel">
           <div class="card text-center card-product">
             <div class="card-product__img">
-              <img class="img-fluid" src="img/product/product1.png" alt="">
+              <img class="card-img" src="img/game/pubg.jpg" alt="width="150px" height="300px"">
               <ul class="card-product__imgOverlay">
                 <li><button><i class="ti-search"></i></button></li>
                 <li><button><i class="ti-shopping-cart"></i></button></li>
@@ -235,15 +157,15 @@
               </ul>
             </div>
             <div class="card-body">
-              <p>Accessories</p>
-              <h4 class="card-product__title"><a href="/single-product">Quartz Belt Watch</a></h4>
-              <p class="card-product__price">$150.00</p>
+              <p>Action Game</p>
+              <h4 class="card-product__title"><a href="/product?id=46">PlayerUnknown BattleGrounds</a></h4>
+              <p class="card-product__price">265.000đ</p>
             </div>
           </div>
 
           <div class="card text-center card-product">
             <div class="card-product__img">
-              <img class="img-fluid" src="img/product/product2.png" alt="">
+              <img class="card-img" src="img/game/rush.jpg" alt="width="150px" height="300px"">
               <ul class="card-product__imgOverlay">
                 <li><button><i class="ti-search"></i></button></li>
                 <li><button><i class="ti-shopping-cart"></i></button></li>
@@ -251,15 +173,15 @@
               </ul>
             </div>
             <div class="card-body">
-              <p>Beauty</p>
-              <h4 class="card-product__title"><a href="/single-product">Women Freshwash</a></h4>
-              <p class="card-product__price">$150.00</p>
+              <p>Adventure Game</p>
+              <h4 class="card-product__title"><a href="/product?id=48">Rust</a></h4>
+              <p class="card-product__price">240.000đ</p>
             </div>
           </div>
 
           <div class="card text-center card-product">
             <div class="card-product__img">
-              <img class="img-fluid" src="img/product/product3.png" alt="">
+              <img class="card-img" src="img/game/warframe.jpg" alt="width="150px" height="300px"">
               <ul class="card-product__imgOverlay">
                 <li><button><i class="ti-search"></i></button></li>
                 <li><button><i class="ti-shopping-cart"></i></button></li>
@@ -267,15 +189,15 @@
               </ul>
             </div>
             <div class="card-body">
-              <p>Decor</p>
-              <h4 class="card-product__title"><a href="/single-product">Room Flash Light</a></h4>
-              <p class="card-product__price">$150.00</p>
+              <p>Action Game</p>
+              <h4 class="card-product__title"><a href="/product?id=51">WarFrame</a></h4>
+              <p class="card-product__price">230.000đ</p>
             </div>
           </div>
 
           <div class="card text-center card-product">
             <div class="card-product__img">
-              <img class="img-fluid" src="img/product/product4.png" alt="">
+              <img class="card-img" src="img/game/csgo.jpg" alt="width="150px" height="300px"">
               <ul class="card-product__imgOverlay">
                 <li><button><i class="ti-search"></i></button></li>
                 <li><button><i class="ti-shopping-cart"></i></button></li>
@@ -283,9 +205,9 @@
               </ul>
             </div>
             <div class="card-body">
-              <p>Decor</p>
-              <h4 class="card-product__title"><a href="/single-product">Room Flash Light</a></h4>
-              <p class="card-product__price">$150.00</p>
+              <p>Action Game</p>
+              <h4 class="card-product__title"><a href="/single-product">Counter Strike Global Offensive</a></h4>
+              <p class="card-product__price">160.000đ</p>
             </div>
           </div>
 
@@ -446,6 +368,19 @@
     </section>
     <!-- ================ Subscribe section end ================= --> 
 
-    
+      {{#each category}}
+        <script>
+          data.push("{{name}}");
+        </script>
+        {{/each}}
 
 </main>
+
+<script>
+  var id1 = "#" + data[0];
+  var id2 = "#" + data[1];
+  var id3 = "#" + data[2];
+  $(id1).attr("href", "/searchResult?search="+data[0]+"&type=category");
+  $(id2).attr("href", "/searchResult?search="+data[1]+"&type=category");
+  $(id3).attr("href", "/searchResult?search="+data[2]+"&type=category");
+</script>

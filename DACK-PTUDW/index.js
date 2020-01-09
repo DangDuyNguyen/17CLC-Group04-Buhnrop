@@ -1,47 +1,72 @@
-let express = require('express');
-let app = express();
+var express = require('express');
+var app = express();
 
-//Set public static folder
+// Setting for app here
 app.use(express.static(__dirname + '/public'));
-
-//Use view engine
-let expressHbs = require('express-handlebars');
-let hbs = expressHbs.create({
-    extname: 'hbs',
-    defaultLayout: 'layout',
-    layoutsDir: __dirname + '/views/layouts/',
-    partialsDir: __dirname + '/views/partials/'
+// Use View Engine
+var expressHbs = require('express-handlebars');
+var paginateHelper = require('express-handlebars-paginate');
+var hbs = expressHbs.create({
+	extname			: 'hbs',
+	defaultLayout	: 'layout', 
+	layoutsDir		: __dirname + '/views/layouts/',
+	partialsDir		: __dirname + '/views/partials/',
+	helpers			: {
+		paginate: paginateHelper.createPagination
+	}
 });
 app.engine('hbs', hbs.engine);
 app.set('view engine', 'hbs');
-
-//Define your routes here 
-app.get('/', (req, res) => {
-    res.render('index');
-});
-app.get('/single-product',(req,res)=>{
-    res.render('product_detail')
-});
-app.get('/categories',(req,res)=>{
-    res.render('allProduct')
-});
-app.get('/:page', (req, res) => {
-    let banners = {
-        blog: 'Our Blog',
-        cart: 'Shopping Cart',
-        category: 'Shop Category',
-        checkout: 'Product Checkout',
-        confirmation: 'Order Confirmation',
-        contact: 'Contact Us',
-        login: 'Login / Register',
-        register: 'Register'
-    }
-    let page = req.params.page;
-    res.render(page, {banner: banners[page]});
+// Define your routes here
+var models = require('./models');
+app.get('/sync', function(req, res){
+	models.sequelize.sync().then(function(){
+		res.send('database sync completed!');
+	});
 });
 
-//Set server port & start server
-app.set('port', process.env.PORT || 4000);
-app.listen(app.get('port'), () => {
-    console.log(`Server is running at port ${app.get('port')}`);
+app.use("/", require("./routes/indexRouter"));
+app.use("/product", require("./routes/productRouter"));
+app.use("/cart",require("./routes/cartRouter"));
+
+app.get('/',(req,res)=>{
+	res.render('index');
+});
+app.get('/:page',(req,res)=>{
+	let page=req.params.page;
+	res.render(page);
+});
+
+//Use body parser
+let bodyParser=require('body-parser');
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended:false}));
+
+//Use Cookie Parser
+let cookieParser=require('cookie-parser');
+app.use(cookieParser());
+
+//Use Session
+let session=require('express-session');
+app.use(session({
+	cookie:{httpOnly:true,maxAge:30*24*60*60*1000},
+	secret:'S3cret',
+	resave:false,
+	saveUninitialized:false
+}));
+
+//Use Cart Controller
+let Cart=require('./controllers/cartController');
+app.use((req,res,next)=>{
+	var cart=new Cart(req.session.cart?req.session.cart:{});
+	req.session.cart=cart;
+	res.locals.totalQuanity=cart.totalQuanity;
+	next();
+});
+
+// Set Server Port & Start Server
+app.set('port', (process.env.PORT || 3000));
+
+app.listen(app.get('port'), function(){
+	console.log('Server is listening at port ' + app.get('port'));
 });
