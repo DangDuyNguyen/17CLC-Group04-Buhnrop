@@ -22,27 +22,41 @@
             
             
             <div id="header_col3" class="col">
-              <a id="shopping_cart" href="/AuctionCart" role="button">
-                <button type="button" class="btn btn-outline-warning" onclick="location.href='/AuctionCart'"><b>Shopping Cart</b></button>
+              <a id="shopping_cart" href="/cart" role="button">
+                <button type="button" class="btn btn-outline-warning add-to-cart" data-id="{{id}}" ><b>Shopping Cart</b></button>
               </a>
               
+              {{#if isLoggedIn}}
+                <div class="chip">
+                    <div class="dropdown"style="float:right;">
+                            <img class="user_logo" src="/css/images/guest_logo.png" alt="avatar" class="avatar">
+                            <span><b>{{User.Fullname}}</b></span>
+                            <div class="dropdown-content">
+                            <a href="/personalAreaAdmin">
+                            <button type="button" class="btn btn-primary">Infomation</button></a>
+                            <a href="/index">
+                            <button type="button" class="btn btn-primary">Logout</button></a>
+                        </div>
+                    </div>                        
+                </div>
+
+              {{else}}
               <div id="profile-chip"> 
-              <a  href="/sign_in" role="button">
+              <a  href="/users/login" role="button">
                 <div class="chip">
                     <img src="/css/images/guest_logo.png">
                     <b>Sign in now</b>  
                 </div>
               </a>
             </div>
+            {{/if}}
+
           </div>                
         </div>
 
         <div id="navigate_bar">
             <div class="btn-group btn-group-small">
-                <button type="button" class="btn btn-primary">Categories</button>
-                <button type="button" class="btn btn-primary">News</button>
-                <button type="button" class="btn btn-primary">FAQs</button>
-                <button type="button" class="btn btn-primary">Help</button>
+                <a href="/categories"><button type="button" class="btn btn-primary">Categories</button></a>
             
             </div>
         </div>

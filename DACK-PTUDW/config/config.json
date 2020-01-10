@@ -4,14 +4,15 @@
     "password": "postgres",
     "database": "OnlineShoppingWeb",
     "host": "localhost",
-    "dialect": "postgres"
+    "dialect": "postgres", 
+    "start": "nodemon index.js"
   },
   "test": {
     "username": "root",
     "password": null,
     "database": "database_test",
     "host": "localhost",
-    "dialect": "mysql",
+    "dialect": "postgres",
     "operatorsAliases": false
   },
   "production": {
@@ -19,7 +20,7 @@
     "password": null,
     "database": "database_production",
     "host": "localhost",
-    "dialect": "mysql",
+    "dialect": "postgres",
     "operatorsAliases": false
   }
 }

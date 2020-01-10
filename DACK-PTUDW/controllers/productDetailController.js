@@ -16,9 +16,16 @@ controller.getById = function(id) {
         }
     }
    
-    options.where.ProductId = {
+    options.where.id = {
     [Op.eq]: id
     };
     return models.ProductDetail.findOne(options);
-}
+};
+
+controller.getAll=(query)=>{
+    let option={
+    }
+    return models.Product.findAll(option);
+};
+
 module.exports = controller;

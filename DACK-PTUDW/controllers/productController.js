@@ -28,6 +28,4 @@ controller.getByCategory = function(id) {
     };
     return models.Product.findAll(options);
 }
-
-
 module.exports = controller;

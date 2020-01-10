@@ -6,7 +6,6 @@ router.get('/', (req,res) => {
     
     productDetailController.getById(req.query.id).then(data => {
         res.locals.product = data;
-        //console.log(res.locals.product[0].Product);
         return res.render('product_detail');
     })
 });

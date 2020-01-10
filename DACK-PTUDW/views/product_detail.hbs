@@ -1,6 +1,4 @@
-
-
-  <!--================Single Product Area =================-->
+<!--================Single Product Area =================-->
 	{{#with product}}
 	<div class="product_image_area">
 		<div class="container">
@@ -8,7 +6,7 @@
 				<div class="col-lg-6">
 					<div class="owl-carousel owl-theme s_Product_carousel">
 						<div class="single-prd-item">
-							<img class="img-fluid" src={{ImagePath}} alt="..">
+							<img class="card-img" src={{imgPath}} alt=".." width="150px" height="600px" >
 						</div>
 						
 					</div>
@@ -17,26 +15,23 @@
 				<div class="col-lg-5 offset-lg-1">
 					<div class="s_product_text">
 						{{#with Product}}
-						<h3>{{Name}}</h3>
-						<h2>{{Price}}đ</h2>
+						<h3>{{name}}</h3>
+						<h2>{{price}}đ</h2>
 						{{#with Category}}
 						<script>
 							console.log("aaa");
 						</script>
 						<ul class="list">
-							<li><a class="active" href="#"><span>Category</span> : {{name}}</a></li>
-							<li><a href="#"><span>Availibility</span> : In Stock</a></li>
+							<li><span>Category</span> : {{Name}}</li>
+							<li><span>Availibility</span> : In Stock</li>
 						</ul>
 						{{/with}}
 						{{/with}}
 						<p>{{summary}}</p>
 						<div class="product_count">
                             <label for="qty">Quantity:</label>
-                            <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
-							 class="increase items-count" type="button"><i class="ti-angle-left"></i></button>
 							<input type="text" name="qty" id="sst" size="2" maxlength="12" value="1" title="Quantity:" class="input-text qty">
-							<button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;" class="reduced items-count" type="button"><i class="ti-angle-right"></i></button>
-							<a class="button primary-btn" href="#">Add to Cart</a>               
+							<button class="button primary-btn add-to-cart" data-id="{{id}}">Add to Cart</button>               
 						</div>
 						
 					</div>
@@ -353,70 +348,3 @@
 	</section>
 	<!--================End Product Description Area =================-->
 
-	<!--================ Start related Product area =================-->  
-	<section class="related-product-area section-margin--small mt-0">
-		<div class="container">
-			<div class="section-intro pb-60px">
-        <p>Popular Item in the market</p>
-        <h2>Top <span class="section-intro__style">Product</span></h2>
-      </div>
-			<div class="row mt-30">
-        <div class="col-sm-6 col-xl-6 mb-4 mb-xl-0">
-          <div class="single-search-product-wrapper">
-            <div class="single-search-product d-flex">
-              <a href="#"><img src="img/game/pubg.jpg" alt=""></a>
-              <div class="desc">
-                  <a href="#" class="title">PlayerUnknown's BattleGrounds</a>
-                  <div class="price">265.000d</div>
-              </div>
-            </div>
-            <div class="single-search-product d-flex">
-              <a href="#"><img src="img/game/csgo.jpg" alt=""></a>
-              <div class="desc">
-                <a href="#" class="title">Counter-Strike: Global Offensive</a>
-                <div class="price">160.000đ</div>
-              </div>
-            </div>
-            <div class="single-search-product d-flex">
-              <a href="#"><img src="img/game/rush.jpg" alt=""></a>
-              <div class="desc">
-                <a href="#" class="title">Rust</a>
-                <div class="price">240.000đ</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6 col-xl-6 mb-4 mb-xl-0">
-          <div class="single-search-product-wrapper">
-            <div class="single-search-product d-flex">
-              <a href="#"><img src="img/game/stardewvalley.jpg" alt=""></a>
-              <div class="desc">
-                  <a href="#" class="title">Stardew Valley</a>
-                  <div class="price">245.000đ</div>
-              </div>
-            </div>
-            <div class="single-search-product d-flex">
-              <a href="#"><img src="img/game/witcher.jpg" alt=""></a>
-              <div class="desc">
-                <a href="#" class="title">The Witcher 3: Wild Hunt</a>
-                <div class="price">720.000đ</div>
-              </div>
-            </div>
-            <div class="single-search-product d-flex">
-              <a href="#"><img src="img/game/warframe.jpg" alt=""></a>
-              <div class="desc">
-                <a href="#" class="title">WarFrame</a>
-                <div class="price">230.000đ</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-       
-
-        
-      </div>
-		</div>
-	</section>
-	<!--================ end related Product area =================-->

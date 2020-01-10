@@ -7,7 +7,8 @@ let Op = Sequelize.Op;
 controller.getAll = function(query){
     let options = {
         where: {},
-        limit: 3
+        limit: 3,
+        include: [{model: models.Product}]      
       };
       if (query.search) {
           if (query.search != "") {

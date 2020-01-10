@@ -1,0 +1,48 @@
+{{>header}}
+{{#with cart}}
+<div class="content">
+    <div class="container">
+            <div class="card">
+                    <table class="table table-hover shopping-cart-wrap">
+                    <thead class="text-muted">
+                    <tr>
+                      <th scope="col">Product</th>
+                      <th scope="col" width="120">Quantity</th>
+                      <th scope="col" width="120">Price</th>
+                      <th scope="col" width="200" class="text-right">Action</th>
+                    </tr>
+                    </thead>
+                    <tbody id="cartItem">
+                        {{#each items}}
+                        <tr>
+                            <td>
+                                <div class="media">
+                                    <div class="d-flex">
+                                        <img src="{{item.imgPath}}" alt="">
+                                    </div>
+                                    <dir class="media-body">
+                                        <p>{{item.name}}</p>
+                                    </dir>
+                                </div>
+                            </td>
+                            <td>
+                                <h5>${{item.price}}</h5>
+                            </td>
+                            <td>
+                                <div class="product-count">
+                                    <input type="text" value="{{quantity}}">
+                                </div>
+                            </td>
+                            <td>
+                                <h5>${{price}}</h5>
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                    </table>
+                    </div>
+                    
+    </div>
+</div>
+{{/with}}
+{{>footer}}

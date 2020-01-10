@@ -32,21 +32,23 @@
         {{#each category}} 
 
         <div class="hero-carousel__slide">
-          <img src="{{imgPath}}" alt="width="150px" height="300px"" class="img-fluid">
-          <a href="" class="hero-carousel__slideOverlay" id={{name}}>
-            <p>{{name}}</p>
+          <img src="{{Imagepath}}" alt="" width="150px" height="300px"class="card-img">
+          <a href="" class="hero-carousel__slideOverlay" id={{Name}}>
+            <p>{{Name}}</p>
           </a>
         </div>
         {{/each}}
       </div>
     </section>
     <!--================ Hero Carousel end =================-->
-
+<script>
+  var data = [];
+</script>
     <!-- ================ trending product section start ================= -->  
     <section class="section-margin calc-60px">
       <div class="container">
         <div class="section-intro pb-60px">
-          <h2>Trending <span class="section-intro__style">Game</span></h2>
+          <h2>Trending Game</span></h2>
         </div>
         <div class="row">
           <div class="col-md-6 col-lg-4 col-xl-3">
@@ -61,7 +63,7 @@
               </div>
               <div class="card-body">
                 <p>Action Game</p>
-                <h4 class="card-product__title"><a href="/product?id=1">PlayerUnknown BattleGrounds</a></h4>
+                <h4 class="card-product__title"><a href="/products?id=1">PlayerUnknown BattleGrounds</a></h4>
                 <p class="card-product__price">265.000đ</p>
               </div>
             </div>
@@ -78,7 +80,7 @@
               </div>
               <div class="card-body">
                 <p>Action Game</p>
-                <h4 class="card-product__title"><a href="/product?id=47">Counter Strike Global Offensive</a></h4>
+                <h4 class="card-product__title"><a href="/products?id=2">Counter Strike Global Offensive</a></h4>
                 <p class="card-product__price">160.000đ</p>
               </div>
             </div>
@@ -86,7 +88,7 @@
           <div class="col-md-6 col-lg-4 col-xl-3">
             <div class="card text-center card-product">
               <div class="card-product__img">
-                <img class="card-img" src="img/game/stardewvalley.jpg" alt="width="150px" height="300px"">
+                <img class="card-img" src="img/game/rust.jpg" alt="width="150px" height="300px"">
                 <ul class="card-product__imgOverlay">
                   <li><button><i class="ti-search"></i></button></li>
                   <li><button><i class="ti-shopping-cart"></i></button></li>
@@ -94,9 +96,9 @@
                 </ul>
               </div>
               <div class="card-body">
-                <p>Farm Game</p>
-                <h4 class="card-product__title"><a href="/product?id=50">Stardew Valley</a></h4>
-                <p class="card-product__price">245.000đ</p>
+                <p>Action Game</p>
+                <h4 class="card-product__title"><a href="/products?id=3">Rust</a></h4>
+                <p class="card-product__price">240.000đ</p>
               </div>
             </div>
           </div>
@@ -112,7 +114,7 @@
               </div>
               <div class="card-body">
                 <p>Adventure</p>
-                <h4 class="card-product__title"><a href="/product?id=49">The Witcher Wild Hunt 3</a></h4>
+                <h4 class="card-product__title"><a href="/products?id=4">The Witcher Wild Hunt 3</a></h4>
                 <p class="card-product__price">720.000đ</p>
               </div>
             </div>
@@ -278,102 +280,11 @@
       </div>
     </section>
     <!-- ================ Best Selling item  carousel end ================= --> 
-
-    <!-- ================ Blog section start ================= -->  
-    <section class="blog">
-      <div class="container">
-        <div class="section-intro pb-60px">
-          <p>Popular Item in the market</p>
-          <h2>Latest <span class="section-intro__style">News</span></h2>
-        </div>
-
-        <div class="row">
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
-            <div class="card card-blog">
-              <div class="card-blog__img">
-                <img class="card-img rounded-0" src="img/blog/blog1.png" alt="">
-              </div>
-              <div class="card-body">
-                <ul class="card-blog__info">
-                  <li><a href="#">By Admin</a></li>
-                  <li><a href="#"><i class="ti-comments-smiley"></i> 2 Comments</a></li>
-                </ul>
-                <h4 class="card-blog__title"><a href="/single-blog">The Richland Center Shooping News and weekly shooper</a></h4>
-                <p>Let one fifth i bring fly to divided face for bearing divide unto seed. Winged divided light Forth.</p>
-                <a class="card-blog__link" href="#">Read More <i class="ti-arrow-right"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
-            <div class="card card-blog">
-              <div class="card-blog__img">
-                <img class="card-img rounded-0" src="img/blog/blog2.png" alt="">
-              </div>
-              <div class="card-body">
-                <ul class="card-blog__info">
-                  <li><a href="#">By Admin</a></li>
-                  <li><a href="#"><i class="ti-comments-smiley"></i> 2 Comments</a></li>
-                </ul>
-                <h4 class="card-blog__title"><a href="/single-blog">The Shopping News also offers top-quality printing services</a></h4>
-                <p>Let one fifth i bring fly to divided face for bearing divide unto seed. Winged divided light Forth.</p>
-                <a class="card-blog__link" href="#">Read More <i class="ti-arrow-right"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
-            <div class="card card-blog">
-              <div class="card-blog__img">
-                <img class="card-img rounded-0" src="img/blog/blog3.png" alt="">
-              </div>
-              <div class="card-body">
-                <ul class="card-blog__info">
-                  <li><a href="#">By Admin</a></li>
-                  <li><a href="#"><i class="ti-comments-smiley"></i> 2 Comments</a></li>
-                </ul>
-                <h4 class="card-blog__title"><a href="/single-blog">Professional design staff and efficient equipment you’ll find we offer</a></h4>
-                <p>Let one fifth i bring fly to divided face for bearing divide unto seed. Winged divided light Forth.</p>
-                <a class="card-blog__link" href="#">Read More <i class="ti-arrow-right"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- ================ Blog section end ================= -->  
-
-    <!-- ================ Subscribe section start ================= --> 
-    <section class="subscribe-position">
-      <div class="container">
-        <div class="subscribe text-center">
-          <h3 class="subscribe__title">Get Update From Anywhere</h3>
-          <p>Bearing Void gathering light light his eavening unto dont afraid</p>
-          <div id="mc_embed_signup">
-            <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscribe-form form-inline mt-5 pt-1">
-              <div class="form-group ml-sm-auto">
-                <input class="form-control mb-1" type="email" name="EMAIL" placeholder="Enter your email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address '" >
-                <div class="info"></div>
-              </div>
-              <button class="button button-subscribe mr-auto mb-1" type="submit">Subscribe Now</button>
-              <div style="position: absolute; left: -5000px;">
-                <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
-              </div>
-
-            </form>
-          </div>
-          
-        </div>
-      </div>
-    </section>
-    <!-- ================ Subscribe section end ================= --> 
-
-      {{#each category}}
-        <script>
-          data.push("{{name}}");
-        </script>
-        {{/each}}
-
+{{#each category}}
+<script>
+  data.push("{{Name}}");
+</script>
+{{/each}}
 </main>
 
 <script>

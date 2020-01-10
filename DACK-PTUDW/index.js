@@ -24,19 +24,6 @@ app.get('/sync', function(req, res){
 		res.send('database sync completed!');
 	});
 });
-
-app.use("/", require("./routes/indexRouter"));
-app.use("/product", require("./routes/productRouter"));
-app.use("/cart",require("./routes/cartRouter"));
-
-app.get('/',(req,res)=>{
-	res.render('index');
-});
-app.get('/:page',(req,res)=>{
-	let page=req.params.page;
-	res.render(page);
-});
-
 //Use body parser
 let bodyParser=require('body-parser');
 app.use(bodyParser.json());
@@ -56,13 +43,36 @@ app.use(session({
 }));
 
 //Use Cart Controller
-let Cart=require('./controllers/cartController');
-app.use((req,res,next)=>{
-	var cart=new Cart(req.session.cart?req.session.cart:{});
-	req.session.cart=cart;
-	res.locals.totalQuanity=cart.totalQuanity;
-	next();
+let Cart = require('./controllers/cartController');
+app.use((req, res, next) => {
+    var cart = new Cart(req.session.cart ? req.session.cart: {});
+    req.session.cart = cart;
+    res.locals.totalQuantity = cart.totalQuantity;
+
+    res.locals.fullname = req.session.user ? req.session.user.fullname : '';
+    res.locals.user = req.session.user;
+
+    res.locals.avt = req.session.user ? req.session.user.avatarPath : '';
+
+    res.locals.isAdmin = req.session.user ? req.session.user.isAdmin : false;
+    res.locals.isLoggedIn = req.session.user ? true : false; 
+    res.locals.userid = req.session.user? req.session.user.id : '';
+    next();
 });
+
+
+app.use("/", require("./routes/indexRouter"));
+app.use("/users", require("./routes/userRouter"));
+app.use("/products", require("./routes/productRouter"));
+app.use("/categories", require("./routes/categoryRouter"));
+app.use("/cart",require("./routes/cartRouter"));
+app.use("/admin", require("./routes/adminRouter"));
+
+app.get('/:page',(req,res)=>{
+	let page=req.params.page;
+	res.render(page);
+});
+
 
 // Set Server Port & Start Server
 app.set('port', (process.env.PORT || 3000));
